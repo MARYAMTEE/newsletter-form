@@ -17,7 +17,7 @@ body{
     font-weight: 500;
     font-size: 16px;
     color: var(--ligt-blue);
-    letter-spacing: 1px;
+    background-color: var(--white);
 }
 
 img{
@@ -40,18 +40,57 @@ img{
 .col-2{
     display: flex;
     flex-direction: column;
-    padding: 50px 20px;
+    padding: 30px 25px 10px;
+}
+
+.max-width-22rem{
+    max-width: 22rem;
+
 }
 
 .intro-list li{
     display: flex;
     align-items: flex-start;
     list-style-type: none;
-    padding: 5px 0;
+    padding: 8px 0;
     gap: 20px;
 }
 
 .intro-list li p{
-    line-height: 1.6;
+    line-height: 1.5;
     margin: -3px;
+}
+
+.newsletter-form{
+    padding: 30px 0;
+}
+
+.newsletter-form form{
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-form form input{
+    padding: 23px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid var(--grey);
+}
+
+.newsletter-form form input[type="submit"]{
+    background-color: var(--blue);
+    color: var(--white);
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+input::placeholder{
+    color: var(--grey);
+    font-size: 16px;
+}
+
+.newsletter-form form label{
+    color: var(--blue);
+    padding-bottom: 10px;
 }
