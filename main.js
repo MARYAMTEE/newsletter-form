@@ -1,4 +1,5 @@
 const form = document.getElementById('form');
+const emailInput = document.getElementById('email');
 const errorMessage = document.getElementById('errorMessage');
 const successMessage = document.getElementById('successMessage');
 
@@ -23,10 +24,17 @@ form.addEventListener("submit", (e) => {
         errorMessage.textContent = errors[0];
         errorMessage.className = "errorMessage";
         errorMessage.style.display = "block";
+
+        emailInput.style.backgroundColor = "#ff00002d";
+        emailInput.style.border = "1px solid red"
+
         successMessage.classList.add("hidden");
     } else {
         errorMessage.textContent= "";
         errorMessage.style.display = "none";
+
+        emailInput.style.backgroundColor = "";
+        emailInput.style.borderColor = "";
         successMessage.classList.remove("hidden");
     }
 });

@@ -108,6 +108,7 @@ input::placeholder{
     color: var(--red);
     font-size: 16px;
     min-width: 150px;
+    padding-bottom: 10px;
   }
 
   .success-message{
