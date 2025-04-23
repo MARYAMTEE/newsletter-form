@@ -42,8 +42,11 @@
                     </div>
                 </div>
                 <div class="newsletter-form">
-                    <form action="">
-                        <label for="email" name="email">Email address</label>
+                    <form action="" id="form">
+                        <div class="label-error-container">
+                            <label for="email" name="email">Email address</label>
+                            <div class="errorMessage" id="errorMessage"></div>
+                        </div>
                         <input type="email" id="email" placeholder="email@company.com" required>
                         <input type="submit" value="Subscribe to monthly newsletter">
                     </form>
