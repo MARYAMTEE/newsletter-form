@@ -29,7 +29,7 @@ img{
 .intro-texts h1, .success-message h1{
     color: var(--blue);
     font-weight: 700;
-    font-size: 45px;
+    font-size: 40px;
 }
 
 .intro-texts p{
@@ -110,7 +110,6 @@ input::placeholder{
   }
 
   /* Error Message */
-  
   .errorMessage {
     color: var(--red);
     font-size: 16px;
@@ -119,7 +118,6 @@ input::placeholder{
   }
 
   /* Mobile Success message */
-
   .success-message{
     position: fixed;
     top: 0;
@@ -221,5 +219,59 @@ input::placeholder{
 
     .dismiss-button{
         margin-top: 30px;
+    }
+}
+
+@media (min-width: 768px){
+    body{
+        background-color: var(--blue);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        font-size: 16px;
+    }
+
+    .container{
+        background-color: var(--white);
+        padding: 25px;
+        border-radius: 40px;
+        max-width: 55rem; 
+    }
+
+    .row{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        gap: 25px;
+    }
+
+    .col{
+        flex: 1;
+    }
+
+    .col-2{
+        padding: 10px 0 0;
+        display: flex;
+       justify-content: center;
+       align-items: flex-start;
+    }
+
+    .max-width-22rem{
+        max-width: 100%;
+    }
+
+    .newsletter-form{
+        padding-top: 30px;
+    }
+
+    .success-message{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .success-message p{
+        max-width: 50rem;;
     }
 }
