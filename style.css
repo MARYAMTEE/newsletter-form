@@ -222,7 +222,7 @@ input::placeholder{
     }
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) and (max-width: 1020px){
     body{
         background-color: var(--blue);
         display: flex;
