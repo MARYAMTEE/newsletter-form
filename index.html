@@ -14,9 +14,13 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
+        <div class="row" id="row">
             <div class="col col-1">
-                <img src="./images/illustration-sign-up-mobile.svg" alt="">
+                <picture>
+                    <source srcset="./images/illustration-sign-up-desktop.svg" media="(min-width: 1024px)">
+                    <source srcset="./images/illustration-sign-up-mobile.svg" media="(min-width: 200px)" alt="Sign up image">
+                    <img src="./images/illustration-default.svg" alt="Sign up illustration">
+                </picture>
             </div>
             <div class="col col-2">
                 <div class="max-width-22rem">
@@ -50,17 +54,16 @@
                         <input type="email" id="email" placeholder="email@company.com" required>
                         <input type="submit" value="Subscribe to monthly newsletter">
                     </form>
-
-                    <div id="successMessage" class="success-message hidden">
-                        <img src="./images/icon-success.svg" alt="Success Icon">
-                        <h1> Thanks for subscribing!</h1>
-                        <p>A confirmation email has been sent to <a href="mailto:ash@loremcompany.com">ash@loremcompany.com</a>. 
-                            Please open it and click the button inside to confirm your subscription.</p>
-                        <button class="dismiss-button" onclick="dismissSuccess()">Dismiss Message</button>
-                      </div>
                 </div>
             </div>
         </div>
+        <div id="successMessage" class="success-message hidden">
+            <img src="./images/icon-success.svg" alt="Success Icon">
+            <h1> Thanks for subscribing!</h1>
+            <p>A confirmation email has been sent to <a href="mailto:ash@loremcompany.com">ash@loremcompany.com</a>. 
+                Please open it and click the button inside to confirm your subscription.</p>
+            <button class="dismiss-button" onclick="dismissSuccess()">Dismiss Message</button>
+          </div>
     </div>
 
     <script src="./main.js"></script>

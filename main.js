@@ -2,6 +2,7 @@ const form = document.getElementById('form');
 const emailInput = document.getElementById('email');
 const errorMessage = document.getElementById('errorMessage');
 const successMessage = document.getElementById('successMessage');
+const row = document.getElementById('row');
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -35,11 +36,14 @@ form.addEventListener("submit", (e) => {
 
         emailInput.style.backgroundColor = "";
         emailInput.style.borderColor = "";
+        row.style.display = "none";
         successMessage.classList.remove("hidden");
     }
 });
 
 function dismissSuccess() {
     successMessage.classList.add("hidden");
+
+    row.style.removeProperty('display');
     form.reset();
 }

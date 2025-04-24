@@ -1,3 +1,4 @@
+/* General Rule */
 *{
     padding: 0;
     margin: 0;
@@ -24,14 +25,16 @@ img{
     max-width:  100%;
 }
 
+/* Mobile View */
 .intro-texts h1, .success-message h1{
     color: var(--blue);
     font-weight: 700;
-    font-size: 45px;
+    font-size: 55px;
 }
 
 .intro-texts p{
     padding: 20px 0;
+    line-height: 1.5;
 }
 
 .col-1 img{
@@ -46,7 +49,6 @@ img{
 
 .max-width-22rem{
     max-width: 22rem;
-
 }
 
 .intro-list li{
@@ -66,25 +68,28 @@ img{
     padding: 30px 0;
 }
 
-.newsletter-form form{
-    display: flex;
-    flex-direction: column;
-}
-
 .newsletter-form form input, .dismiss-button{
-    padding: 20px;
+    padding: 22px;
     border-radius: 10px;
     outline: none;
     border: 1px solid var(--grey);
+    width: 100%;
 }
 
 .newsletter-form form input[type="submit"], .dismiss-button{
     background-color: var(--blue);
     color: var(--white);
     margin-top: 30px;
-    /* font-weight: bold; */
+    padding: 22px;
     font-size: 18px;
+    outline: none;
+    border: none;
     cursor: pointer;
+}
+
+.newsletter-form form input[type="submit"]:hover, .dismiss-button:hover{
+    background-color: var(--red);
+   
 }
 
 input::placeholder{
@@ -95,6 +100,7 @@ input::placeholder{
 .newsletter-form form label{
     color: var(--blue);
     padding-bottom: 10px;
+    font-weight: 700;
 }
 
 .label-error-container {
@@ -103,6 +109,8 @@ input::placeholder{
     align-items: center;
     gap: 10px; 
   }
+
+  /* Error Message */
   
   .errorMessage {
     color: var(--red);
@@ -110,6 +118,8 @@ input::placeholder{
     min-width: 150px;
     padding-bottom: 10px;
   }
+
+  /* Mobile Success message */
 
   .success-message{
     position: fixed;
@@ -122,6 +132,7 @@ input::placeholder{
     padding: 150px 24px 30px;
     z-index: 1000;
     background-color: var(--white);
+    transition: all 0.3s ease;
   }
 
   .success-message img {
@@ -147,6 +158,68 @@ input::placeholder{
     border: none;
 }
 
-  .hidden{
+.hidden{
     display: none;
-  }
+}
+
+/* Desktop View */
+@media (min-width: 1024px) {
+    body{
+        background-color: var(--blue);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        font-size: 16px;
+    }
+
+    .container{
+        background-color: var(--white);
+        padding: 25px 25px 25px 35px;
+        border-radius: 40px;
+        max-width: 55rem; 
+    }
+
+    .row{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        gap: 30px;
+    }
+
+    .col{
+        flex: 1;
+    }
+
+    .col-2{
+       display: flex;
+       justify-content: center;
+       align-items: flex-start;
+    }
+
+    .max-width-22rem{
+        max-width: 25rem;
+    }
+
+    /* Desktop Success Message */
+    .success-message {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 550px;
+        height: 550px;
+        padding: 50px 80px 80px;
+        border-radius: 50px;
+        overflow: visible;
+    }
+
+    .success-message p{
+        max-width: 100%;
+    }
+
+    .dismiss-button{
+        margin-top: 30px;
+    }
+}
