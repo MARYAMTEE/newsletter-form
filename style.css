@@ -29,7 +29,7 @@ img{
 .intro-texts h1, .success-message h1{
     color: var(--blue);
     font-weight: 700;
-    font-size: 55px;
+    font-size: 45px;
 }
 
 .intro-texts p{
@@ -208,8 +208,8 @@ input::placeholder{
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 550px;
-        height: 550px;
+        width: 530px;
+        height: 530px;
         padding: 50px 80px 80px;
         border-radius: 50px;
         overflow: visible;
