@@ -19,7 +19,7 @@ form.addEventListener("submit", (e) => {
         errors.push("Valid email required");
     }else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         errors.push("Valid email required");
-      }
+    }
 
     if(errors.length > 0) {
         errorMessage.textContent = errors[0];
