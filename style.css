@@ -20,6 +20,9 @@ body{
     color: var(--ligt-blue);
     background-color: var(--white);
 }
+input{
+    font-size: 1rem;
+}
 
 img{
     max-width:  100%;
@@ -86,12 +89,11 @@ img{
     outline: none;
     border: none;
     cursor: pointer;
-    padding: 22px;
+    height: 4rem;
 }
 
 .newsletter-form form input[type="submit"]:hover, .dismiss-button:hover{
     background-color: var(--red);
-   
 }
 
 input::placeholder{
